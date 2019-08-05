@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63cf0d4a-89e5-4243-9cf7-eb26dc317656" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pages/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,13 +50,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="62" />
+          <entry key="html" value="70" />
           <entry key="php" value="630" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="62" />
+          <entry key="HTML" value="70" />
           <entry key="PHP" value="630" />
         </counts>
       </usages-collector>
@@ -82,7 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -91,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="43" column="53" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="53" />
+            <state relative-caret-position="143">
+              <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -152,8 +152,8 @@
         <option value="$PROJECT_DIR$/pages/config.php" />
         <option value="$PROJECT_DIR$/pages/add.html" />
         <option value="$PROJECT_DIR$/pages/index.php" />
-        <option value="$PROJECT_DIR$/pages/login.html" />
         <option value="$PROJECT_DIR$/pages/login.php" />
+        <option value="$PROJECT_DIR$/pages/login.html" />
       </list>
     </option>
   </component>
@@ -229,12 +229,12 @@
       <workItem from="1564730373031" duration="4204000" />
       <workItem from="1564746549722" duration="946000" />
       <workItem from="1564815883711" duration="14000" />
-      <workItem from="1565012234187" duration="523000" />
+      <workItem from="1565012234187" duration="709000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5687000" />
+    <option name="totallyTimeSpent" value="5873000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -311,10 +311,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/login.html">
+    <entry file="file://$PROJECT_DIR$/pages/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="43" column="53" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="53" />
+        <state relative-caret-position="323">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -325,10 +325,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/login.php">
+    <entry file="file://$PROJECT_DIR$/pages/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        <state relative-caret-position="143">
+          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
         </state>
       </provider>
     </entry>
