@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
                 <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
+                <a class="nav-link" href="register123.php">Register</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Pricing</a>
@@ -37,7 +37,7 @@
 <br><br>
 
 <div class="container">
-    <form action="login.php" method="post" name="form1">
+    <form action="register123.php" method="post" name="form1">
         <table class="table table-bordered table-active">
             <tr>
                 <td>Username</td>
@@ -54,6 +54,23 @@
         </table>
     </form>
 </div>
+
+<?php
+if (isset($_POST['Submit']) && !empty($_POST['username'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    echo register($username);
+}
+
+function register($username)
+{
+    $x = "Username inputted: " . $username;
+    return $x;
+}
+
+?>
+
 
 </body>
 </html>

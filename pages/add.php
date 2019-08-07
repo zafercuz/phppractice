@@ -8,6 +8,8 @@
 //including the database connection file
 include_once("config.php");
 
+
+
 if(isset($_POST['Submit'])) {
     $name = $_POST['name'];
     $age = $_POST['age'];
