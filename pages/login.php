@@ -1,3 +1,6 @@
+<?php
+include_once('config.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,10 +22,13 @@
                 <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="register123.php">Register</a>
+                <a class="nav-link" href="#">View Users</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="register.php">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.php">Login</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
@@ -37,7 +43,7 @@
 <br><br>
 
 <div class="container">
-    <form action="register123.php" method="post" name="form1">
+    <form action="register.php" method="post" name="form1">
         <table class="table table-bordered table-active">
             <tr>
                 <td>Username</td>
@@ -60,7 +66,13 @@ if (isset($_POST['Submit']) && !empty($_POST['username'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    echo register($username);
+    $query = "INSERT INTO systemusers(username, password) VALUES(:username, :password)";
+    $query = $dbConn->prepare($query);
+
+    $query->bindparam(':username', $username);
+    $query->bindparam(':password', $password);
+    $query->execute();
+    header("refresh:0;url=index.php");
 }
 
 function register($username)

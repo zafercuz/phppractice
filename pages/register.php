@@ -1,18 +1,15 @@
 <?php
-//including the database connection file
-include_once("config.php");
-
-//fetching data in descending order (lastest entry first)
-$result = $dbConn->query("SELECT * FROM users ORDER BY personid ASC");
+include_once('config.php');
+include ('class/registerlogin.php');
 ?>
-
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Homepage</title>
+    <title>Register</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
-
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="index.php">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
@@ -44,33 +41,50 @@ $result = $dbConn->query("SELECT * FROM users ORDER BY personid ASC");
         </form>
     </div>
 </nav>
-
 <br><br>
+
 <div class="container">
-
-    <a href="add.html" class="btn btn-info">Add New Data</a><br/><br/>
-
-    <table class="table table-bordered table-active">
-
-        <tr bgcolor='#CCCCCC'>
-            <td>ID</td>
-            <td>Name</td>
-            <td>Age</td>
-            <td>Email</td>
-            <td>Update</td>
-        </tr>
-        <?php
-        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-            echo "<tr>";
-            echo "<td>" . $row['personid'] . "</td>";
-            echo "<td>" . $row['name'] . "</td>";
-            echo "<td>" . $row['age'] . "</td>";
-            echo "<td>" . $row['email'] . "</td>";
-            echo "<td><a href=\"edit.php?id=$row[personid]\">Edit</a> | <a href=\"delete.php?id=$row[personid]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
-        }
-        ?>
-    </table>
+    <form action="register.php" method="post" name="form1">
+        <table class="table table-bordered table-active">
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="username" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" class="form-control"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="Submit" value="Register" class="btn btn-primary"></td>
+            </tr>
+        </table>
+    </form>
 </div>
+
+<?php
+if (isset($_POST['Submit']) && !empty($_POST['username'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    register($username,$password);
+//    $query = "INSERT INTO systemusers(username, password) VALUES(:username, :password)";
+//    $query = $dbConn->prepare($query);
+//
+//    $query->bindparam(':username', $username);
+//    $query->bindparam(':password', $password);
+//    $query->execute();
+    header("refresh:0;url=register.php");
+}
+
+function register($username)
+{
+    $x = "Username inputted: " . $username;
+    return $x;
+}
+
+?>
+
 
 </body>
 </html>
